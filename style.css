@@ -1,0 +1,207 @@
+body{
+    background-color:#F3F3E0;
+}
+nav {
+  background-color: #d62828; /* Restaurant's primary color */
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+nav ul li a:hover {
+  color: #f1f1f1;
+  border-bottom: 2px solid #f1f1f1;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  nav ul li {
+    margin-left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+  }
+}
+.navbar{
+    height:100px;
+    background-color: pink;
+}
+.start{
+    text-align: center;
+    text-decoration: double;
+    height:250px;
+    font-size:100px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-top: 20px;
+    background-color: aquamarine;
+    color:#BE5B50;
+}
+.start:hover{
+    font-size: 150px;
+    background-color:#6FE6FC;
+}
+p{
+    text-align: center;
+    color:#670D2F;
+    font-size:20px;;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif Geneva, Verdana, sans-serif;
+}
+#image{
+    padding-left: 450px;
+    margin-top: 20px;
+    animation: img 3s linear 3s infinite normal;
+}
+@keyframes img{
+  from{left:0px;}
+  to{left:200px;}
+}
+.about{
+    text-align: center;
+    text-decoration: underline;
+    height: 200px;
+    background-color: #FF90BB;
+    font-size:100px;
+    color:black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.btn{
+    background-color: black;
+    color:aliceblue;
+    font-size:50px;;
+    border-radius:50px;
+}
+.btn:hover{
+    background-color: red;
+}
+.complement{
+    display:flex;
+    justify-content: space-evenly;
+    background-color: #FF8282;
+    margin-top:20px;
+}
+.box{
+   border:2px solid black;
+    height:300px;
+    width:250px;
+    background-color: #FFDF88;
+}
+.head{
+    color:#3A59D1;
+}
+.para{
+    color:#BE3D2A;
+    text-decoration:dotted;
+}
+.box:hover{
+  font-size:large;
+  background-color:#F3C623;
+}
+.order{
+  height: 250px;
+  text-align: center;
+  text-decoration: wavy;
+  font-family: fantasy;
+  background-color:#FFC1DA;
+}  
+#order{
+  font-size:50px;
+  color:#4A102A;
+}
+.ordernow{
+  height: 90px;
+  width: 150px;
+  color:#BE3D2A;
+  border: 2px solid black;
+
+}
+.ordernow:hover{
+  background-color: #FF90BB;
+  font-size: 30px;
+}
+footer {
+  background-color: #FE7743; /* Restaurant's primary color */
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+  margin-top: 50px;
+}
+
+footer .footer-logo {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+footer p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+footer .social-icons {
+  margin-top: 20px;
+}
+
+footer .social-icons a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  margin: 0 15px;
+}
+
+footer .social-icons a:hover {
+  color: #f1f1f1;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  footer {
+    padding: 20px 10px;
+  }
+
+  footer .social-icons {
+    margin-top: 10px;
+  }
+
+  footer .social-icons a {
+    font-size: 18px;
+    margin: 0 10px;
+  }
+}

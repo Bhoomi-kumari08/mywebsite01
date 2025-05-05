@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Complete Food Order Form</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff5f5;
+      padding: 20px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #d62828;
+      margin-bottom: 20px;
+    }
+
+    form {
+      max-width: 700px;
+      margin: 0 auto;
+      background: white;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1em;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    .section-title {
+      margin-top: 25px;
+      color: #d62828;
+      font-size: 18px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 5px;
+    }
+
+    .checkbox-group {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .checkbox-group label {
+      font-weight: normal;
+      font-size: 15px;
+    }
+
+    button {
+      margin-top: 25px;
+      background-color: #d62828;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1em;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #a4161a;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Order Your Food</h2>
+
+  <form action="#" method="post">
+    <!-- Customer Info -->
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="phone">Phone Number:</label>
+    <input type="number" id="phone" name="phone" required>
+
+    <label for="address">Delivery Address:</label>
+    <textarea id="address" name="address" rows="3" required></textarea>
+
+    <!-- Food Items -->
+    <div class="section-title">Indian Dishes</div>
+    <div class="checkbox-group">
+      <label><input type="checkbox" name="dishes" value="Butter Chicken"> Butter Chicken</label>
+      <label><input type="checkbox" name="dishes" value="Paneer Tikka"> Paneer Tikka</label>
+      <label><input type="checkbox" name="dishes" value="Biryani"> Biryani</label>
+      <label><input type="checkbox" name="dishes" value="Chole Bhature"> Chole Bhature</label>
+      <label><input type="checkbox" name="dishes" value="Samosa"> Samosa</label>
+      <label><input type="checkbox" name="dishes" value="Rajma Chawal"> Rajma Chawal</label>
+      <label><input type="checkbox" name="dishes" value="Masala Dosa"> Masala Dosa</label>
+      <label><input type="checkbox" name="dishes" value="Tandoori Chicken"> Tandoori Chicken</label>
+      <label><input type="checkbox" name="dishes" value="Aloo Gobi"> Aloo Gobi</label>
+      <label><input type="checkbox" name="dishes" value="Dal Makhani"> Dal Makhani</label>
+    </div>
+
+    <div class="section-title">Chinese Dishes</div>
+    <div class="checkbox-group">
+      <label><input type="checkbox" name="dishes" value="Chow Mein"> Chow Mein</label>
+      <label><input type="checkbox" name="dishes" value="Sweet and Sour Chicken"> Sweet and Sour Chicken</label>
+      <label><input type="checkbox" name="dishes" value="Spring Rolls"> Spring Rolls</label>
+      <label><input type="checkbox" name="dishes" value="Kung Pao Chicken"> Kung Pao Chicken</label>
+      <label><input type="checkbox" name="dishes" value="Manchurian"> Manchurian</label>
+      <label><input type="checkbox" name="dishes" value="Hot and Sour Soup"> Hot and Sour Soup</label>
+      <label><input type="checkbox" name="dishes" value="Hakka Noodles"> Hakka Noodles</label>
+      <label><input type="checkbox" name="dishes" value="Fried Rice"> Fried Rice</label>
+      <label><input type="checkbox" name="dishes" value="Dim Sum"> Dim Sum</label>
+      <label><input type="checkbox" name="dishes" value="Szechuan Chicken"> Szechuan Chicken</label>
+    </div>
+
+    <div class="section-title">Japanese Dishes</div>
+    <div class="checkbox-group">
+      <label><input type="checkbox" name="dishes" value="Sushi"> Sushi</label>
+      <label><input type="checkbox" name="dishes" value="Ramen"> Ramen</label>
+      <label><input type="checkbox" name="dishes" value="Tempura"> Tempura</label>
+      <label><input type="checkbox" name="dishes" value="Teriyaki Chicken"> Teriyaki Chicken</label>
+      <label><input type="checkbox" name="dishes" value="Udon Noodles"> Udon Noodles</label>
+      <label><input type="checkbox" name="dishes" value="Miso Soup"> Miso Soup</label>
+      <label><input type="checkbox" name="dishes" value="Yakitori"> Yakitori</label>
+      <label><input type="checkbox" name="dishes" value="Okonomiyaki"> Okonomiyaki</label>
+      <label><input type="checkbox" name="dishes" value="Matcha Ice Cream"> Matcha Ice Cream</label>
+      <label><input type="checkbox" name="dishes" value="Onigiri"> Onigiri</label>
+    </div>
+
+    <!-- Submit -->
+    <button type="submit">Place Order</button>
+  </form>
+  <p id="message" style="color: green; display: none;">Form submitted successfully!</p>
+
+<script>
+  document.getElementById('myForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // prevent actual form submission
+    document.getElementById('message').style.display = 'block';
+  });
+</script>
+
+</body>
+</html>
